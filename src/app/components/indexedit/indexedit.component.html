@@ -1,0 +1,34 @@
+<div class="p-5 mb-4 bg-light rounded-3 bg-jumbo">
+    <h1 class=" lead display-4 text-light"> Cambio de clasificación de residuos en el territorio en Colombia </h1>
+    <hr class="my-4">
+    <p class="lead text-light font-weight-light"> El gobierno unifica el código de colores para la separación de residuos en la fuente a nivel nacional. El Ministerio de Ambiente
+      y Desarrollo Sostenible, en conjunto con el Ministerio de Vivienda, Ciudad y Territorio, mediante Resolución, establecieron un
+      código de colores unificado para la separación de residuos en la fuente, que deberá adoptarse en todo el territorio nacional a
+      partir del primero de enero de 2021.
+    </p>
+    <a href="https://www.minambiente.gov.co/index.php/noticias/4595-gobierno-unifica-el-codigo-de-colores-para-la-separacion-de-residuos-en-la-fuente-a-nivel-nacional#" class="btn btn-primary btn-lg"> Leer Más</a>
+  </div>
+  
+  <h1 class="lead display-5 text-dark text-center">Impactos generados por contaminacion</h1>
+  
+  
+  
+  
+  
+  
+  <div class="row mb-2">
+      <div class="col-md-6" *ngFor="let index of indexService.index">
+        <a><i [routerLink]="['/','indexform']" (click)="editIndex(index)" class="far fa-edit p-2"></i></a>
+        <a><i (click)="deleteIndex(index._id!)" class="fas fa-trash-alt p-2"></i></a>
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">{{index.location}}</strong>
+            <h3 class="mb-0">{{index.title}}</h3>
+            <p class="card-text mb-auto">{{index.description}}</p>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+          </div>
+        </div>
+      </div>
+  </div>

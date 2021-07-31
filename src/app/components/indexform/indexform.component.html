@@ -1,0 +1,29 @@
+<div class="row mb-2">
+    <div class="container">
+        <form #indexForm="ngForm" (ngSubmit)="addIndex(indexForm)" id="index-form" method="POST">
+            
+            <input type="hidden" name="_id" [(ngModel)]="indexService.selectedIndex._id">
+
+            <h1 class="font-weight-bold mb-4">Create Information</h1>
+            <div class="mb-4">
+                <label  class="form-label font-weight-bold">Location</label>
+                <input type="text" class="form-control border-0 mr-2" placeholder="Location"  aria-describedby="emailHelp" name="location" [(ngModel)]="indexService.selectedIndex.location">
+            </div>
+            <div class="mb-4">
+                <label  class="form-label font-weight-bold">Title</label>
+                <input type="text" class="form-control border-0" placeholder="Title"  aria-describedby="emailHelp" name="title" [(ngModel)]="indexService.selectedIndex.title">
+            </div>
+            <div class="custom-file mb-4">
+                <label  class="form-label font-weight-bold">Choose Image</label>
+                <input type="file" class="custom-file-input border-0" placeholder="Image" name="image">
+            </div>
+            <div class="mb-4">
+                <label  class="form-label font-weight-bold">Information</label>
+                <textarea type="text" class="form-control border-0" placeholder="Description" name="description" [(ngModel)]="indexService.selectedIndex.description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        </form>
+    </div>
+</div>
+
+

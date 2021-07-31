@@ -1,0 +1,23 @@
+<div class="row mb-2">
+    <div class="container">
+        <form #puntosForm="ngForm" (ngSubmit)="addPunto(puntosForm)">
+            
+            <input type="hidden" name="_id" [(ngModel)]="puntosService.selectedPunto._id">
+
+            <h1 class="font-weight-bold mb-4">Crear y Modificar Puntos de Reciclaje</h1>
+            <div class="mb-4">
+                <label  class="form-label font-weight-bold">Location</label>
+                <input type="text" class="form-control border-0 mr-2" placeholder="Nombre de Ubicacion" name="nombre" [(ngModel)]="puntosService.selectedPunto.nombre">
+            </div>
+            <div class="mb-4">
+                <label  class="form-label font-weight-bold">Title</label>
+                <input type="text" class="form-control border-0" placeholder="Direccion de Ubicacion" name="direccion" [(ngModel)]="puntosService.selectedPunto.direccion">
+            </div>
+            <div class="custom-file mb-4">
+                <label  class="form-label font-weight-bold">Choose Image</label>
+                <input type="file" class="custom-file-input border-0" placeholder="Image" name="image">
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        </form>
+    </div>
+</div>

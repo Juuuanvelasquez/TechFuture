@@ -1,0 +1,98 @@
+<!-- Modal #1 -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" >Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" *ngFor="let organicos of aboutService.organicos">
+                <div class="card w-75">
+                    <div class="card-body">
+                        <h5 class="card-title">{{organicos.material}}</h5>
+                        <p class="card-text">{{organicos.uso}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal #2 -->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" *ngFor="let plasticos of aboutService.plasticos">
+            
+                <div class="card w-75">
+                    <div class="card-body">
+                        <h5 class="card-title">{{plasticos.material}}</h5>
+                        <p class="card-text">{{plasticos.uso}}</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal #2 -->
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" >Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" *ngFor="let desechables of aboutService.desechables">
+        
+                <div class="card w-75">
+                    <div class="card-body">
+                        <h5 class="card-title">{{desechables.material}}</h5>
+                        <p class="card-text">{{desechables.uso}}</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="p-5 mb-4 bg-light rounded-3 bg-jumbo2">
+    <h1 class=" lead display-4 text-light"></h1>
+    <p class="lead text-light font-weight-light"> </p>
+</div>
+
+
+
+
+
+<h2 class="pb-2 border-bottom ml-auto">Como separan los residuos?</h2>
+<div class="row g-5 py-5 bg-light rounded-3">
+    <div class="feature col-md-4 ">
+        <div class="container d-flex justify-content-between alin-items-center icons1">
+            <a data-bs-toggle="modal" data-bs-target="#modal1"><i class="fas fa-carrot"></i></a>
+        </div>
+        <h2>Residuos Organicos Aprovechables</h2>
+    </div>
+    <div class="feature col-md-4 ">
+        <div class="container d-flex justify-content-between alin-items-center icons2">
+            <a data-bs-toggle="modal" data-bs-target="#modal2"><i class="fas fa-wine-bottle"></i></a>
+        </div>
+        <h2>Residuos Aprovechables</h2>
+    </div>
+    <div class="feature col-md-4 ">
+        <div class="container d-flex justify-content-between alin-items-center icons3">
+            <a data-bs-toggle="modal" data-bs-target="#modal3"><i class="fas fa-toilet-paper"></i></a>
+        </div>
+        <h2>Residuos No Aprovechables</h2>
+    </div>
+</div>
